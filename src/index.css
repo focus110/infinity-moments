@@ -1,7 +1,17 @@
+@font-face {
+  font-family: fragille;
+  src: url("./assets/fonts/Fragille-Reguler.ttf");
+}
+
+@font-face {
+  font-family: gilroy;
+  src: url("./assets/fonts/Gilroy-Light.otf");
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: gilroy, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -12,13 +22,11 @@ code {
     monospace;
 }
 
-@font-face {
-  font-family: fragille;
-  src: url("./assets/font/Fragille-Reguler.ttf");
-}
-
 .font-fragille {
   font-family: fragille;
+}
+.font-gilroy {
+  font-family: gilroy;
 }
 
 .wrapper {

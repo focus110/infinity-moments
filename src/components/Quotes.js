@@ -7,7 +7,7 @@ const Quotes = () => {
       <div className="flex justify-between items-end py-6">
         <Title title="Quotes" />
         <button>
-          <p className="underline font-medium text-lg">Edit</p>
+          <p className="underline font-medium text-lg md:text-xl">Edit</p>
         </button>
       </div>
     </div>
