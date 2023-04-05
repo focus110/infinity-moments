@@ -3,7 +3,7 @@ import Title from "./Title";
 
 const Quotes = () => {
   return (
-    <div className="container py-4">
+    <div className="wrapper py-4">
       <div className="flex justify-between items-end py-6">
         <Title title="Quotes" />
         <button>

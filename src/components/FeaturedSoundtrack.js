@@ -3,7 +3,7 @@ import Title from "./Title";
 
 const FeaturedSoundtrack = () => {
   return (
-    <div className="container py-4">
+    <div className="wrapper py-4">
       <div className="flex justify-between items-center py-6">
         <Title title="Featured SoundTrack" />
         <button>

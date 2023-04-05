@@ -7,13 +7,13 @@ const Logo = ({ color }) => {
   if (color === "white") {
     return (
       <Link to="/">
-        <img src={whiteLogo} alt="!#" />
+        <img className="w-14" src={whiteLogo} alt="!#" />
       </Link>
     );
   }
   return (
     <Link to="/">
-      <img src={logo} alt="!#" />
+      <img className="w-14" src={logo} alt="!#" />
     </Link>
   );
 };

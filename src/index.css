@@ -12,6 +12,19 @@ code {
     monospace;
 }
 
+@font-face {
+  font-family: fragille;
+  src: url("./assets/font/Fragille-Reguler.ttf");
+}
+
+.font-fragille {
+  font-family: fragille;
+}
+
+.wrapper {
+  @apply w-[90%] md:w-[500px] mx-auto;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
