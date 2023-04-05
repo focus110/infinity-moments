@@ -4,7 +4,7 @@ import Title from "../components/Title";
 
 const FeaturedPhoto = () => {
   return (
-    <div className="px-4 md:px-96 py-4">
+    <div className="container py-4">
       <div className="flex justify-between items-end py-6">
         <Title title="Featured Photo" />
         <p className="underline font-medium text-lg">Upload Photo</p>
