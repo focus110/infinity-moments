@@ -4,9 +4,11 @@ import img1 from "../assets/profile-Img.png";
 
 const Nav = () => {
   return (
-    <div className="px-4 md:px-96 py-4 flex justify-between items-center bg-red-500">
+    <div className="px-4 md:px-96 py-4 flex justify-between items-center">
       <Logo />
-      <img src={img1} alt="!#" />
+      <button className="w-10 h-10">
+        <img src={img1} alt="!#" />
+      </button>
     </div>
   );
 };

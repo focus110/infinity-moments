@@ -5,7 +5,7 @@ import Logo from "./Logo";
 
 const Hero = () => {
   return (
-    <div className="px-4 md:px-96 relative py-8">
+    <div className="px-4 md:px-96 relative">
       <div className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] flex justify-between">
         <div>
           <img className="" src={profileImg} alt="!#" />
