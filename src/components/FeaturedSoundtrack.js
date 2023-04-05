@@ -1,5 +1,6 @@
 import React from "react";
 import Title from "./Title";
+import trackImg from "../assets/track-img.png";
 
 const FeaturedSoundtrack = () => {
   return (
@@ -23,15 +24,19 @@ const FeaturedSoundtrack = () => {
         </button>
       </div>
 
-      <div className="flex justify-between items-center rounded-xl p-4 m-4 shadow__style">
+      <div className="flex justify-between items-center rounded-xl p-4 md:p-8 m-2 md:m-4 shadow__style">
         <div>
-          <img src="" alt="!#" />
+          <img className="w-16 md:w-24 rounded-[5px]" src={trackImg} alt="!#" />
         </div>
 
-        <div>
-          <h2>Cyber Motherboard</h2>
-          <p>by Trirole Snakers</p>
-          <p>03:23</p>
+        <div className="md:space-y-[2.5px]">
+          <h2 className="md:text-2xl">Cyber Motherboard</h2>
+          <p className="text-sm md:text-base text-[#666666]">
+            by Trirole Snakers
+          </p>
+          <p className="bg-[#eeeeee] text-sm w-max py-[2.5px] px-[5px] rounded-[5px]">
+            03:23
+          </p>
         </div>
 
         <button className="self-end">
