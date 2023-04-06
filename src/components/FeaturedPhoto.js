@@ -7,9 +7,11 @@ const FeaturedPhoto = () => {
     <div className="wrapper py-4">
       <div className="flex justify-between items-end py-6">
         <Title title="Featured Photo" />
-        <p className="underline font-gilroy font-black text-lg md:text-xl">
-          Upload Photo
-        </p>
+        <button>
+          <p className="underline font-gilroy font-black text-lg md:text-xl">
+            Upload Photo
+          </p>
+        </button>
       </div>
       <div className="relative">
         <h2 className="absolute left-8 bottom-8 text-white font-fragille text-2xl md:text-4xl">

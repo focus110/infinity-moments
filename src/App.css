@@ -1,3 +1,22 @@
 .shadow__style {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 70px 50px 0;
+}
+
+.triangle {
+  border-color: #ffe1e1 transparent transparent transparent;
+}
+
+.triangle__white {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 50px 50px 70px;
+  border-color: transparent #f8f8f8 transparent transparent;
+}

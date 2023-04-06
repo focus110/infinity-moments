@@ -4,7 +4,7 @@ import trackImg from "../assets/track-img.png";
 
 const FeaturedSoundtrack = () => {
   return (
-    <div className="wrapper py-4">
+    <div className="wrapper">
       <div className="flex justify-between items-center py-6">
         <Title title="Featured SoundTrack" />
         <button>
@@ -24,7 +24,7 @@ const FeaturedSoundtrack = () => {
         </button>
       </div>
 
-      <div className="flex justify-between items-center rounded-xl p-4 md:p-8 m-2 md:m-4 shadow__style">
+      <div className="flex justify-between items-center rounded-[13px] p-4 md:p-8 m-2 md:m-4 shadow__style">
         <div>
           <img className="w-16 md:w-24 rounded-[5px]" src={trackImg} alt="!#" />
         </div>
