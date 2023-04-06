@@ -5,6 +5,8 @@ import FeaturedPhoto from "../components/FeaturedPhoto";
 import FeaturedSoundtrack from "../components/FeaturedSoundtrack";
 import Quotes from "../components/Quotes";
 import BucketList from "../components/BucketList";
+import TimeLine from "../components/TimeLine";
+import AddSection from "../components/AddSection";
 
 const Partner = () => {
   return (
@@ -15,6 +17,8 @@ const Partner = () => {
       <FeaturedSoundtrack />
       <Quotes />
       <BucketList />
+      <TimeLine />
+      <AddSection />
     </div>
   );
 };
