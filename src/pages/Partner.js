@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import FeaturedPhoto from "../components/FeaturedPhoto";
 import FeaturedSoundtrack from "../components/FeaturedSoundtrack";
 import Quotes from "../components/Quotes";
+import BucketList from "../components/BucketList";
 
 const Partner = () => {
   return (
@@ -13,6 +14,7 @@ const Partner = () => {
       <FeaturedPhoto />
       <FeaturedSoundtrack />
       <Quotes />
+      <BucketList />
     </div>
   );
 };

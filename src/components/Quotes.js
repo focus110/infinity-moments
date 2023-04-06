@@ -12,10 +12,10 @@ const Quotes = () => {
         </button>
       </div>
 
-      <div className="relative bg-[#ffe1e1] flex items-center space-x-4 mb-8 rounded-[13px] p-4 md:p-6 px-8">
+      <div className="relative bg-[#ffe1e1] flex items-center space-x-4 mb-8 rounded-[13px] p-4 md:p-6 md:px-8">
         <div className="absolute left-0 -bottom-[70px] -z-10 triangle"></div>
         <img
-          className="w-20 h-20 rounded-full border-4 border-white"
+          className="md:w-20 md:h-20 rounded-full border-4 border-white"
           src={img3}
           alt="!#"
         />
@@ -27,7 +27,7 @@ const Quotes = () => {
         </div>
       </div>
 
-      <div className="relative bg-[#f8f8f8] flex items-center space-x-4 rounded-[13px] p-4 px-8">
+      <div className="relative bg-[#f8f8f8] flex items-center space-x-4 rounded-[13px] p-4 md:px-8 mb-4">
         <div className="absolute right-0 -bottom-[25px] -z-10 triangle__white"></div>
 
         <div>
@@ -38,7 +38,7 @@ const Quotes = () => {
         </div>
 
         <img
-          className="w-20 h-20 rounded-full border-4 border-white"
+          className="md:w-20 md:h-20 rounded-full border-4 border-white"
           src={img3}
           alt="!#"
         />

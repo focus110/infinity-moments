@@ -24,7 +24,7 @@ const FeaturedSoundtrack = () => {
         </button>
       </div>
 
-      <div className="flex justify-between items-center rounded-[13px] p-4 md:p-8 m-2 md:m-4 shadow__style">
+      <div className="flex justify-between items-center space-x-2 rounded-[13px] p-4 md:p-8 m-2 md:m-4 shadow__style">
         <div>
           <img className="w-16 md:w-24 rounded-[5px]" src={trackImg} alt="!#" />
         </div>
