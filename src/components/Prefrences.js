@@ -3,7 +3,7 @@ import Title from "./Title";
 import Logo from "./Logo";
 
 const Prefrences = () => {
-  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked, setIsChecked] = useState(true);
   const [isChecked1, setIsChecked1] = useState(false);
 
   const handleNotify = () => {
@@ -41,7 +41,7 @@ const Prefrences = () => {
 
           <div className="flex items-center space-x-4">
             <p className="md:text-xl font-bold text-text-grey">English</p>
-            <div>
+            <button>
               <svg
                 className="w-[22px] h-[22px]"
                 viewBox="0 0 7 10"
@@ -53,7 +53,7 @@ const Prefrences = () => {
                   fill="black"
                 />
               </svg>
-            </div>
+            </button>
           </div>
         </div>
 
@@ -170,7 +170,7 @@ const Prefrences = () => {
               </svg>
             </div>
 
-            <div>
+            <button>
               <svg
                 className="w-[22px] h-[22px]"
                 viewBox="0 0 7 10"
@@ -182,7 +182,7 @@ const Prefrences = () => {
                   fill="black"
                 />
               </svg>
-            </div>
+            </button>
           </div>
         </div>
 
@@ -208,7 +208,7 @@ const Prefrences = () => {
 
           <div className="flex items-center space-x-4">
             <p className="md:text-xl font-bold text-text-grey">xy days</p>
-            <div>
+            <button>
               <svg
                 className="w-[22px] h-[22px]"
                 viewBox="0 0 7 10"
@@ -220,7 +220,7 @@ const Prefrences = () => {
                   fill="black"
                 />
               </svg>
-            </div>
+            </button>
           </div>
         </div>
 
@@ -244,7 +244,7 @@ const Prefrences = () => {
 
           <div className="flex items-center space-x-4">
             <p className="md:text-xl font-bold text-text-grey"></p>
-            <div>
+            <button>
               <svg
                 className="w-[22px] h-[22px]"
                 viewBox="0 0 7 10"
@@ -256,7 +256,7 @@ const Prefrences = () => {
                   fill="black"
                 />
               </svg>
-            </div>
+            </button>
           </div>
         </div>
       </div>
