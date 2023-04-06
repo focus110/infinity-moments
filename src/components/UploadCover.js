@@ -28,9 +28,9 @@ const UploadCover = () => {
           <p className="text-white text-sm md:text-lg">773 days together</p>
         </div>
 
-        <button className="flex mx-auto items-center text-white space-x-2 py-2 px-8 border-[2.5px] border-white rounded-3xl mb-4">
+        <button className="flex mx-auto items-center text-white space-x-2 py-2 px-8 border-[1.5px] md:border-[2.5px] border-white rounded-3xl mb-4">
           <svg
-            className="w-6 h-6"
+            className="w-4 h-4 md:w-6 md:h-6"
             viewBox="0 0 10 11"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -52,13 +52,13 @@ const UploadCover = () => {
               fill="white"
             />
           </svg>
-          <span className="text-white text-lg md:text-xl">
+          <span className="text-white text-sm md:text-xl">
             Upload new cover
           </span>
         </button>
 
-        <button className="text-center">
-          <p className="underline font-medium text-white md:text-lg">
+        <button className="text-center mb-4">
+          <p className="underline text-white text-sm md:text-lg">
             Remove this cover
           </p>
         </button>

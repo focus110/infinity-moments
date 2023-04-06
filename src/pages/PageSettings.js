@@ -2,6 +2,8 @@ import React from "react";
 import Nav from "../components/Nav";
 import PageTitle from "../components/PageTitle";
 import UploadCover from "../components/UploadCover";
+import Prefrences from "../components/Prefrences";
+import LeavePage from "../components/LeavePage";
 
 const PageSettings = () => {
   return (
@@ -9,6 +11,8 @@ const PageSettings = () => {
       <Nav />
       <PageTitle />
       <UploadCover />
+      <Prefrences />
+      <LeavePage />
     </div>
   );
 };

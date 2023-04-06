@@ -7,6 +7,10 @@ module.exports = {
       "black-faded": "#767676",
       black: "#000000",
       white: "#ffffff",
+      "text-grey": "#AAAAAA",
+      "border-grey": "#DDDDDD",
+      "light-grey": "#EEEEEE",
+      "btn-red": "#BE0000",
       "infinity-grey": "#eeeeee",
     },
     container: {
