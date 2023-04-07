@@ -149,3 +149,37 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+/*=================ANIMATION=================*/
+.fade__ani {
+  animation: fadeIn 2s ease 0s 1 normal forwards;
+}
+
+@keyframes fadeIn {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.top__fade__ani {
+  animation: fadeTop 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0s 1 normal forwards;
+}
+
+@keyframes fadeTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

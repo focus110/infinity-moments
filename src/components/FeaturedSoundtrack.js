@@ -2,12 +2,22 @@ import React from "react";
 import Title from "./Title";
 import trackImg from "../assets/track-img.png";
 
-const FeaturedSoundtrack = () => {
+const FeaturedSoundtrack = ({
+  overlay,
+  isOverlayOpen,
+  editTrack,
+  handleEditTrack,
+}) => {
+  const handleAdd = () => {
+    handleEditTrack();
+    isOverlayOpen();
+  };
+
   return (
     <div className="wrapper">
       <div className="flex justify-between items-center py-6">
         <Title title="Featured SoundTrack" />
-        <button>
+        <button onClick={handleAdd}>
           <svg
             className="w-8 h-8"
             viewBox="0 0 25 25"

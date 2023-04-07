@@ -2,12 +2,17 @@ import React from "react";
 import Title from "./Title";
 import img3 from "../assets/img3.png";
 
-const Quotes = () => {
+const Quotes = ({ handleEditQuote, isOverlayOpen }) => {
+  const handleEdit = () => {
+    handleEditQuote();
+    isOverlayOpen();
+  };
+
   return (
     <div className="wrapper">
       <div className="flex justify-between items-end py-6">
         <Title title="Quotes" />
-        <button>
+        <button onClick={handleEdit}>
           <p className="underline font-medium text-lg md:text-xl">Edit</p>
         </button>
       </div>

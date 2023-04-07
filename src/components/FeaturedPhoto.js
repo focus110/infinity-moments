@@ -2,12 +2,16 @@ import React from "react";
 import img1 from "../assets/img1.png";
 import Title from "../components/Title";
 
-const FeaturedPhoto = () => {
+const FeaturedPhoto = ({ overlay, isOverlayOpen }) => {
+  const handleUpload = () => {
+    isOverlayOpen();
+  };
+
   return (
     <div className="wrapper py-4">
       <div className="flex justify-between items-end py-6">
         <Title title="Featured Photo" />
-        <button>
+        <button onClick={handleUpload}>
           <p className="underline font-gilroy font-black text-lg md:text-xl">
             Upload Photo
           </p>

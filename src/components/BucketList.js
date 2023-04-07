@@ -2,17 +2,22 @@ import React, { useState } from "react";
 import Title from "./Title";
 import { bucketList } from "./Data";
 
-const BucketList = () => {
+const BucketList = ({ overlay, isOverlayOpen }) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const onChange = () => {
     setIsChecked(!isChecked);
   };
+
+  const handleAdd = () => {
+    isOverlayOpen();
+  };
+
   return (
     <div className="wrapper">
       <div className="flex justify-between items-end py-6">
         <Title title="Bucket List" />
-        <button>
+        <button onClick={handleAdd}>
           <svg
             className="w-8 h-8"
             viewBox="0 0 25 25"

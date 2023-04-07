@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Title from "./Title";
 
-const TimeLine = () => {
+const TimeLine = ({ overlay, isOverlayOpen }) => {
   const [timeline, setTimeline] = useState([
     { name: "Look, an R8", date: "Jan,21" },
     { name: "The Alien", date: "Mar,21" },
@@ -10,11 +10,15 @@ const TimeLine = () => {
     { name: "Randomness", date: "Jan,21" },
     { name: "Randomness", date: "Jan,21" },
   ]);
+
+  const handleEdit = () => {
+    isOverlayOpen();
+  };
   return (
     <div className="">
       <div className="wrapper flex justify-between items-end py-6">
         <Title title="Timeline" />
-        <button>
+        <button onClick={handleEdit}>
           <p className="underline font-bold text-lg md:text-xl">Edit</p>
         </button>
       </div>
