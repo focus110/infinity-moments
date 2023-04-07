@@ -11,11 +11,13 @@ import Overlay from "../components/Overlay";
 import EditSoundtrack from "../components/modals/EditSoundtrack";
 import EditQuotes from "../components/modals/EditQuotes";
 import EditList from "../components/modals/EditList";
+import EditTimeline from "../components/modals/EditTimeline";
 
 const Partner = ({ overlay, isOverlayOpen }) => {
   const [editTrack, setEditTrack] = useState(false);
   const [editQuote, setEditQuote] = useState(false);
   const [editList, setEditList] = useState(false);
+  const [editTl, setEditTl] = useState(false);
 
   const handleEditTrack = () => {
     setEditTrack(!editTrack);
@@ -28,6 +30,11 @@ const Partner = ({ overlay, isOverlayOpen }) => {
   const handleEditList = () => {
     setEditList(!editList);
   };
+
+  const handleEditTl = () => {
+    setEditTl(!editTl);
+  };
+
   return (
     <div className="relative">
       <Overlay
@@ -36,6 +43,11 @@ const Partner = ({ overlay, isOverlayOpen }) => {
         setEditTrack={setEditTrack}
         setEditQuote={setEditQuote}
         setEditList={setEditList}
+        setEditTl={setEditTl}
+        editTrack={editTrack}
+        editQuote={editQuote}
+        editList={editList}
+        editTl={editTl}
       />
       <EditSoundtrack
         overlay={overlay}
@@ -54,6 +66,12 @@ const Partner = ({ overlay, isOverlayOpen }) => {
         isOverlayOpen={isOverlayOpen}
         editList={editList}
         handleEditList={handleEditList}
+      />
+      <EditTimeline
+        overlay={overlay}
+        isOverlayOpen={isOverlayOpen}
+        editTl={editTl}
+        handleEditTl={handleEditTl}
       />
 
       <Nav />
@@ -77,7 +95,12 @@ const Partner = ({ overlay, isOverlayOpen }) => {
         editList={editList}
         handleEditList={handleEditList}
       />
-      <TimeLine overlay={overlay} isOverlayOpen={isOverlayOpen} />
+      <TimeLine
+        overlay={overlay}
+        isOverlayOpen={isOverlayOpen}
+        editTl={editTl}
+        handleEditTl={handleEditTl}
+      />
       <AddSection />
     </div>
   );

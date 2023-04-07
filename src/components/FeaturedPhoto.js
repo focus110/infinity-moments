@@ -4,7 +4,7 @@ import Title from "../components/Title";
 
 const FeaturedPhoto = ({ overlay, isOverlayOpen }) => {
   const handleUpload = () => {
-    isOverlayOpen();
+    // isOverlayOpen();
   };
 
   return (

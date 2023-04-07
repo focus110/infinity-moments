@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 import Title from "../Title";
-import { bucketList } from "../Data";
 
-const EditList = ({ isOverlayOpen, editList, handleEditList }) => {
-  const [list, setList] = useState(bucketList);
+const EditTimeline = ({ isOverlayOpen, editTl, handleEditTl }) => {
+  const [eventDetails, setEventDetail] = useState({});
+  const [event, setEvent] = useState([]);
 
-  //   const onChange = (e) => {
-  //     setList(e.target.value);
-  //   };
+  const onChange = (e) => {
+    setEventDetail(...eventDetails, { [e.target.name]: e.target.value });
+  };
 
   const handleClose = () => {
-    handleEditList();
+    handleEditTl();
     isOverlayOpen();
   };
 
-  if (!editList) {
+  if (!editTl) {
     return null;
   }
 
@@ -22,7 +22,7 @@ const EditList = ({ isOverlayOpen, editList, handleEditList }) => {
     <div className="wrapper fixed top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] z-50">
       <div className="w-full flex flex-col justify-center space-y-3  bg-white p-8 rounded-2xl top__fade__ani">
         <div className="flex justify-between items-center">
-          <Title title="Edit List" />
+          <Title title="Edit Timeline" />
           <button onClick={handleClose} className="outline-none">
             <svg
               className="w-[40px] h-[40px] outline-none"
@@ -59,22 +59,43 @@ const EditList = ({ isOverlayOpen, editList, handleEditList }) => {
           </button>
         </div>
 
-        <input
-          className="border-2 outline-none border-border-grey rounded-2xl py-4 px-4 placeholder:font-black mb-4"
-          type="text"
-          placeholder="Paste the spotify URL"
-          //   value={list}
-          //   onChange={onChange}
-        />
+        <p className="font-bold text-lg md:text-xl">Event Details</p>
 
-        <p className="font-bold text-lg md:text-xl">Your List</p>
+        <form className="flex flex-col space-y-3">
+          <input
+            className="border-2 outline-none border-border-grey rounded-2xl py-4 px-4 placeholder:font-black mb-4"
+            type="text"
+            name="event-name"
+            placeholder="Event Name"
+          />
+          <input
+            className="border-2 outline-none border-border-grey rounded-2xl py-4 px-4 placeholder:font-black mb-4"
+            type="Date"
+            name="date"
+            placeholder="Date"
+          />
+          <input
+            className="border-2 outline-none border-border-grey rounded-2xl py-4 px-4 placeholder:font-black mb-4"
+            type="file"
+            name="img"
+            placeholder="Upload Image"
+          />
 
-        {list.map((item, i) => {
+          <textarea
+            name="desc"
+            className="w-full h-32 border-2 outline-none border-border-grey rounded-2xl py-4 px-4 placeholder:font-black mb-4"
+            type="text"
+            placeholder="Description"
+          />
+
+          <button className="w-full mx-auto flex justify-center items-center bg-black text-white py-4 rounded-xl px-8 mb-4">
+            <span>Save Changes</span>
+          </button>
+        </form>
+
+        {event.map((item, i) => {
           return (
-            <div
-              key={i}
-              class="flex justify-between items-center space-x-2 text-left"
-            >
+            <div key={i} class="flex justify-center items-center space-x-2">
               <p className={` text-base md:text-xl font-medium `}>
                 {item.title}
               </p>
@@ -94,13 +115,9 @@ const EditList = ({ isOverlayOpen, editList, handleEditList }) => {
             </div>
           );
         })}
-
-        <button className="w-full mx-auto flex justify-center items-center bg-black text-white py-4 rounded-xl px-8 mb-4">
-          <span>Save Changes</span>
-        </button>
       </div>
     </div>
   );
 };
 
-export default EditList;
+export default EditTimeline;

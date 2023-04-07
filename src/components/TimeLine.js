@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Title from "./Title";
 
-const TimeLine = ({ overlay, isOverlayOpen }) => {
+const TimeLine = ({ handleEditTl, isOverlayOpen }) => {
   const [timeline, setTimeline] = useState([
     { name: "Look, an R8", date: "Jan,21" },
     { name: "The Alien", date: "Mar,21" },
@@ -12,6 +12,7 @@ const TimeLine = ({ overlay, isOverlayOpen }) => {
   ]);
 
   const handleEdit = () => {
+    handleEditTl();
     isOverlayOpen();
   };
   return (

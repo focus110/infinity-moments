@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import Title from "./Title";
 import Logo from "./Logo";
+import IconMenu from "./IconMenu";
 
 const Prefrences = () => {
   const [isChecked, setIsChecked] = useState(true);
   const [isChecked1, setIsChecked1] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleNotify = () => {
     setIsChecked(!isChecked);
@@ -12,6 +14,10 @@ const Prefrences = () => {
 
   const handleMode = () => {
     setIsChecked1(!isChecked1);
+  };
+
+  const handleOpenIcon = () => {
+    setIsOpen(!isOpen);
   };
 
   return (
@@ -170,9 +176,11 @@ const Prefrences = () => {
               </svg>
             </div>
 
-            <button>
+            <button onClick={handleOpenIcon}>
               <svg
-                className="w-[22px] h-[22px]"
+                className={`w-[22px] h-[22px] ${
+                  !isOpen ? "rotate-90" : null
+                } duration-75`}
                 viewBox="0 0 7 10"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -185,6 +193,8 @@ const Prefrences = () => {
             </button>
           </div>
         </div>
+
+        <IconMenu isOpen={isOpen} setIsOpen={setIsOpen} />
 
         <div className="flex justify-between items-center space-x-4">
           <div className="flex items-center space-x-4">

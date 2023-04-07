@@ -19,7 +19,12 @@ function App() {
           element={<Partner overlay={overlay} isOverlayOpen={isOverlayOpen} />}
         />
         <Route path="/page-settings" element={<PageSettings />} />
-        <Route path="/invite-partner" element={<InvitePartner />} />
+        <Route
+          path="/invite-partner"
+          element={
+            <InvitePartner overlay={overlay} isOverlayOpen={isOverlayOpen} />
+          }
+        />
       </Routes>
     </BrowserRouter>
   );

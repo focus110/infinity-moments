@@ -4,7 +4,11 @@ import img3 from "../assets/img3.png";
 import whiteLogo from "../assets/logo-white.png";
 import unkownImg from "../assets/unkown.png";
 
-const InviteBanner = () => {
+const InviteBanner = ({ handleInvite, isOverlayOpen }) => {
+  const handleAction = () => {
+    handleInvite();
+    isOverlayOpen();
+  };
   return (
     <div className="wrapper relative rounded-2xl border-[5px] border-white shadow__style mb-8">
       <button className="absolute top-2 right-2 md:top-6 md:right-6">
@@ -45,7 +49,10 @@ const InviteBanner = () => {
             src={unkownImg}
             alt="!#"
           />
-          <button className="text-white underline text-sm md:text-lg font-black">
+          <button
+            onClick={handleAction}
+            className="text-white underline text-sm md:text-lg font-black"
+          >
             + Invite Partner
           </button>
         </div>

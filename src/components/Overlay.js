@@ -6,12 +6,22 @@ const Overlay = ({
   setEditTrack,
   setEditQuote,
   setEditList,
+  setEditTl,
+  setInvite,
+  editTrack,
+  invite,
+  editQuote,
+  editList,
+  editTl,
 }) => {
   const handleIsOpen = () => {
     isOverlayOpen();
-    setEditTrack(false);
-    setEditQuote(false);
-    setEditList(false);
+    if (editTrack) setEditTrack(false);
+    if (editQuote) setEditQuote(false);
+    if (editList) setEditList(false);
+    if (editTl) setEditTl(false);
+
+    if (invite) setInvite(false);
   };
   return (
     <div>
