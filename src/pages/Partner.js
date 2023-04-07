@@ -10,10 +10,12 @@ import AddSection from "../components/AddSection";
 import Overlay from "../components/Overlay";
 import EditSoundtrack from "../components/modals/EditSoundtrack";
 import EditQuotes from "../components/modals/EditQuotes";
+import EditList from "../components/modals/EditList";
 
 const Partner = ({ overlay, isOverlayOpen }) => {
   const [editTrack, setEditTrack] = useState(false);
   const [editQuote, setEditQuote] = useState(false);
+  const [editList, setEditList] = useState(false);
 
   const handleEditTrack = () => {
     setEditTrack(!editTrack);
@@ -22,6 +24,10 @@ const Partner = ({ overlay, isOverlayOpen }) => {
   const handleEditQuote = () => {
     setEditQuote(!editQuote);
   };
+
+  const handleEditList = () => {
+    setEditList(!editList);
+  };
   return (
     <div className="relative">
       <Overlay
@@ -29,6 +35,7 @@ const Partner = ({ overlay, isOverlayOpen }) => {
         isOverlayOpen={isOverlayOpen}
         setEditTrack={setEditTrack}
         setEditQuote={setEditQuote}
+        setEditList={setEditList}
       />
       <EditSoundtrack
         overlay={overlay}
@@ -41,6 +48,12 @@ const Partner = ({ overlay, isOverlayOpen }) => {
         isOverlayOpen={isOverlayOpen}
         editQuote={editQuote}
         handleEditQuote={handleEditQuote}
+      />
+      <EditList
+        overlay={overlay}
+        isOverlayOpen={isOverlayOpen}
+        editList={editList}
+        handleEditList={handleEditList}
       />
 
       <Nav />
@@ -58,7 +71,12 @@ const Partner = ({ overlay, isOverlayOpen }) => {
         editQuote={editQuote}
         handleEditQuote={handleEditQuote}
       />
-      <BucketList overlay={overlay} isOverlayOpen={isOverlayOpen} />
+      <BucketList
+        overlay={overlay}
+        isOverlayOpen={isOverlayOpen}
+        editList={editList}
+        handleEditList={handleEditList}
+      />
       <TimeLine overlay={overlay} isOverlayOpen={isOverlayOpen} />
       <AddSection />
     </div>

@@ -65,7 +65,7 @@ const EditQuotes = ({ isOverlayOpen, editQuote, handleEditQuote }) => {
             name="florians"
             className="w-full h-32 border-2 outline-none border-border-grey rounded-2xl py-4 px-4 placeholder:font-black mb-4"
             type="text"
-            placeholder="Paste the spotify URL"
+            placeholder="Enter Florian's quote here"
             value={quotes?.florians}
             onChange={onChange}
           />
@@ -77,8 +77,8 @@ const EditQuotes = ({ isOverlayOpen, editQuote, handleEditQuote }) => {
             name="sandra"
             className="w-full h-32 border-2 outline-none border-border-grey rounded-2xl py-4 px-4 placeholder:font-black mb-4"
             type="text"
-            placeholder="Paste the spotify URL"
-            value={quotes?.florians}
+            placeholder="Enter Sandra' quote here"
+            value={quotes?.sandras}
             onChange={onChange}
           />
         </form>

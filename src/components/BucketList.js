@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Title from "./Title";
 import { bucketList } from "./Data";
 
-const BucketList = ({ overlay, isOverlayOpen }) => {
+const BucketList = ({ isOverlayOpen, handleEditList }) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const onChange = () => {
@@ -10,6 +10,7 @@ const BucketList = ({ overlay, isOverlayOpen }) => {
   };
 
   const handleAdd = () => {
+    handleEditList();
     isOverlayOpen();
   };
 

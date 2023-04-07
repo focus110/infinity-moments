@@ -1,10 +1,17 @@
 import React from "react";
 
-const Overlay = ({ overlay, isOverlayOpen, setEditTrack, setEditQuote }) => {
+const Overlay = ({
+  overlay,
+  isOverlayOpen,
+  setEditTrack,
+  setEditQuote,
+  setEditList,
+}) => {
   const handleIsOpen = () => {
     isOverlayOpen();
     setEditTrack(false);
     setEditQuote(false);
+    setEditList(false);
   };
   return (
     <div>
