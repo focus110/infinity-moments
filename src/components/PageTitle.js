@@ -1,10 +1,10 @@
 import React from "react";
 import Title from "./Title";
 
-const PageTitle = () => {
+const PageTitle = ({ title, handleClose }) => {
   return (
     <div className="wrapper flex items-center space-x-4 pb-4">
-      <button>
+      <button onClick={handleClose}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -20,7 +20,7 @@ const PageTitle = () => {
           />
         </svg>
       </button>
-      <Title title="Page Settings" />
+      <Title title={title} />
     </div>
   );
 };

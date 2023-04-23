@@ -9,7 +9,7 @@ const PageSettings = () => {
   return (
     <div>
       <Nav />
-      <PageTitle />
+      <PageTitle title="Page Settings" />
       <UploadCover />
       <Prefrences />
       <LeavePage />

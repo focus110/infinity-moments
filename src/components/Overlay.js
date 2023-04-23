@@ -13,6 +13,8 @@ const Overlay = ({
   editQuote,
   editList,
   editTl,
+  editPwd,
+  setEditPwd,
 }) => {
   const handleIsOpen = () => {
     isOverlayOpen();
@@ -22,6 +24,7 @@ const Overlay = ({
     if (editTl) setEditTl(false);
 
     if (invite) setInvite(false);
+    if (editPwd) setEditPwd(false);
   };
   return (
     <div>
