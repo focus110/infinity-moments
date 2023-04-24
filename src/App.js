@@ -5,6 +5,8 @@ import PageSettings from "./pages/PageSettings";
 import InvitePartner from "./pages/InvitePartner";
 import { useState } from "react";
 import Profile from "./pages/Profile";
+import Generic from "./pages/Generic";
+import Login from "./pages/Login";
 
 function App() {
   const [overlay, setOverlay] = useState(false);
@@ -19,6 +21,8 @@ function App() {
           path="/"
           element={<Partner overlay={overlay} isOverlayOpen={isOverlayOpen} />}
         />
+        <Route path="/generic" element={<Generic />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/page-settings" element={<PageSettings />} />
         <Route
           path="/profile"
