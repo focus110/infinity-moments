@@ -4,7 +4,7 @@ import PageTitle from "../PageTitle";
 const ChangePwd = ({ isOverlayOpen, editPwd, handleEditPwd }) => {
   const handleClose = () => {
     isOverlayOpen();
-    handleEditPwd()
+    handleEditPwd();
   };
 
   if (!editPwd) {
@@ -17,18 +17,23 @@ const ChangePwd = ({ isOverlayOpen, editPwd, handleEditPwd }) => {
           <PageTitle title="Change Password" handleClose={handleClose} />
         </div>
 
-        <form className="flex flex-col space-y-4">
-          <label htmlFor="currPwd" className="font-black">
-            Current Password
-          </label>
-          <input
-            name="currPwd"
-            className="border-2 outline-none border-border-grey rounded-2xl py-4 px-4 placeholder:font-black mb-4"
-            type="Password"
-            placeholder="Password"
-            // value={quotes?.florians}
-            // onChange={onChange}
-          />
+        <form className="relative flex flex-col space-y-4">
+          <div className="flex flex-col">
+            <label htmlFor="currPwd" className="font-black mb-3">
+              Current Password
+            </label>
+            <input
+              name="currPwd"
+              className="border-2 outline-none border-border-grey rounded-2xl py-4 px-4 placeholder:font-black mb-2"
+              type="Password"
+              placeholder="Password"
+              // value={quotes?.florians}
+              // onChange={onChange}
+            />
+            <p className="text-right font-black text-black underline">
+              Forget password?
+            </p>
+          </div>
 
           <label htmlFor="newPwd" className="font-black">
             New Password
